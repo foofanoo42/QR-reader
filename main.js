@@ -9,3 +9,6 @@ $(document).ready(function(){
 		}
 	);
 });
+
+var videoElement = document.getElementById("html5_qrcode_video");
+videoElement.requestFullscreen();
