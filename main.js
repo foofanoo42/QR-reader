@@ -11,7 +11,7 @@ $(document).ready(function(){
 		
 		
 	);
-	$('#reader').videoElement.requestFullscreen();
+	
 	
 		
 		
@@ -24,7 +24,7 @@ $(document).ready(function(){
  //}
 /*
 
-	
+	$('#reader').videoElement.requestFullscreen();
 		
 		var x = document.getElementById("demo");
 		function getLocation() {
