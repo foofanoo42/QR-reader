@@ -29,6 +29,30 @@
     <script src="jquery-1.9.1.min.js"></script>
     <script src="html5-qrcode.min.js"></script>
     <script src="main.js"></script>
+	
+	<script>
+		
+		var x = document.getElementById("demo");
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				x.innerHTML = "Geolocation is not supported by this browser.";
+			}
+		}
+		function showPosition(position) {
+			x.innerHTML = "Latitude: " + position.coords.latitude + 
+			"<br>Longitude: " + position.coords.longitude; 
+		}
+		
+		
+		document.getElementById("demo").addEventListener('mousedown', function (event) {
+			getLocation();
+		});
+		
+		
+	</script>
+	
 
     <title>Recipes by QR code</title>
   </head>
@@ -55,6 +79,10 @@
 <br>
 <h6 class="center">Video Error</h6>
 <span id="vid_error" class="center"></span>
+
+<br>
+<h6 class="center">Video Error</h6>
+<span id="demo" class="center"></span>
 
 <br>
 <br>
