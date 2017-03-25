@@ -7,11 +7,13 @@ $(document).ready(function(){
 		}, function(videoError){
 			$('#vid_error').html(videoError);
 		}
+		
+		
+		$('#reader').videoElement.requestFullscreen();
 	);
 });
 
-if(navigator.userAgent.match(/Android/i)){
-    window.scrollTo(0,1);
- }
-var videoElement = document.getElementById("html5_qrcode_video");
-videoElement.requestFullscreen();
+//if(navigator.userAgent.match(/Android/i)){
+  //  window.scrollTo(0,1);
+ //}
+
